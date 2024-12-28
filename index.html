@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>365</title>
     <link rel="stylesheet" type="text/css" href="365.css">
+    <script>
+        var count = 0;
+    </script>
 </head>
 
 <body>
@@ -169,6 +172,7 @@ var pics5_src = new Array("画像/0.PNG","画像/1.PNG","画像/2.PNG","画像/3
             M = 1;
         }
         var N = ((num3*10+num4+M-2)%7+1)*((((num3*10+num4+M-2)-(num3*10+num4+M-2)%7)/7)+1);
+        var count ++;
         if (N < 10) {
         document.getElementById("1keta").src = pics5_src[N];
         document.getElementById("2keta").src = pics5_src[0];
@@ -193,7 +197,7 @@ var pics5_src = new Array("画像/0.PNG","画像/1.PNG","画像/2.PNG","画像/3
         if (answer == 262) {
             textbox = "Clear!【クリアツイートはこちら】";
             document.getElementById("clear").textContent = textbox;
-            textbox = ""
+            textbox = "クリアまでにEnterを押した回数："+count;
             document.getElementById("notclear").textContent = textbox;
         }
         else {
